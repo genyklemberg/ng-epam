@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class CartComponent implements OnInit {
-
+  hasCart;
   constructor() { }
 
   ngOnInit() {

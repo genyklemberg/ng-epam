@@ -1,3 +1,6 @@
-<p>
-  cart works!
-</p>
+<div>
+  <mat-icon *ngIf='hasCart; else noCart'>shopping-cart</mat-icon>
+</div>
+<ng-template #noCart>
+  <p color='warning'></p>
+</ng-template>

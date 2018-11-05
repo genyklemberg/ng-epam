@@ -9,8 +9,10 @@ import { NavComponent } from './core/nav/nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { NotFoundComponent } from './core/not-found/not-found.component';
-import { ProductComponent } from './components/product/product.component';
+import { ProductComponent } from './components/products/product/product.component';
 import { CartComponent } from './components/cart/cart.component';
+import {MaterialModule} from './core/material/material.module';
+import { ProductListComponent } from './components/products/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -19,18 +21,14 @@ import { CartComponent } from './components/cart/cart.component';
     NavComponent,
     NotFoundComponent,
     ProductComponent,
-    CartComponent
+    CartComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    LayoutModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatIconModule,
-    MatListModule
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
