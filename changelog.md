@@ -18,7 +18,11 @@
 18) ng g i components/products/iproduct
 19) implemented getProducts function in ProductService
 20) ng g s components/cart/cart
-21) add cart ts and html logic 
+21) add cart ts and html logic
+22) ng update @angular/cli
+23) ng update @angular/core
+24) ng update rxjs
+
 
 
 
