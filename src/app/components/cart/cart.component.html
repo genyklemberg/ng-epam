@@ -1,6 +1,9 @@
-<div>
-  <mat-icon *ngIf='hasCart; else noCart'>shopping-cart</mat-icon>
+<div class='container'>
+  <h2>Working Cart</h2>
+  <div>
+    <mat-icon *ngIf='hasCart; else noCart'>shopping-cart</mat-icon>
+  </div>
+  <ng-template #noCart>
+    <p color='warning'></p>
+  </ng-template>
 </div>
-<ng-template #noCart>
-  <p color='warning'></p>
-</ng-template>

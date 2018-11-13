@@ -1,13 +1,32 @@
 import { Injectable } from '@angular/core';
+import {ProductModel} from './product.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
+  products: ProductModel[] = [
+    {
+      name: 'HeadPhones',
+      description: 'Bose',
+      price: 500,
+      category: 'IOT',
+      isAvailable: true,
+      inCart: false
+    },
+    {
+      name: 'VR Helm',
+      description: 'Samsung',
+      price: 1000,
+      category: 'VR',
+      isAvailable: true,
+      inCart: false
+    }
+  ];
 
   constructor() { }
 
   getProducts() {
-    console.log('working service');
+    return this.products;
   }
 }
