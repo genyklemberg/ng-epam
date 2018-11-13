@@ -10,8 +10,8 @@
     <p>{{data.price}}</p>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-icon-button *ngIf='!data?.inCart' (click)='onBuy()'>
-      <mat-icon color='primary'>add_shopping_cart</mat-icon>
+    <button mat-icon-button [disabled]='!data.isAvailable' (click)='onBuy(data)'>
+      <mat-icon [color]='data.isAvailable ? "primary" : "info"'>add_shopping_cart</mat-icon>
     </button>
     <mat-icon color='primary' *ngIf='data?.inCart'>check_circle</mat-icon>
   </mat-card-actions>

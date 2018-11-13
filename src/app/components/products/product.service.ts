@@ -19,7 +19,7 @@ export class ProductService {
       description: 'Samsung',
       price: 1000,
       category: 'VR',
-      isAvailable: true,
+      isAvailable: false,
       inCart: false
     }
   ];

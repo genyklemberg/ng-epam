@@ -2,7 +2,9 @@
   <h2>Products List</h2>
   <mat-list>
     <mat-list-item *ngFor='let p of products' style='height: auto;'>
-      <my-product [data]='p'></my-product>
+      <my-product
+        [data]='p'
+        (inCart)='toCart($event)'></my-product>
     </mat-list-item>
   </mat-list>
 </div>

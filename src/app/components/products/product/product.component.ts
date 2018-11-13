@@ -19,8 +19,9 @@ export class ProductComponent implements OnInit {
   ngOnInit() {
   }
 
-  onBuy() {
-    this.inCart.emit(true);
+  onBuy(item) {
+    this.inCart.emit(item);
+    item.inCart = true;
   }
 
 }

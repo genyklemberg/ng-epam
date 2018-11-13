@@ -1,9 +1,14 @@
 <div class='container'>
   <h2>Working Cart</h2>
-  <div>
-    <mat-icon *ngIf='hasCart; else noCart'>shopping-cart</mat-icon>
+  <div *ngIf='items; else noCart'>
+    <mat-icon>shopping_cart</mat-icon>
+    <mat-list>
+      <mat-list-item *ngFor='let item of items'>
+        <p>{{item.name}}</p>
+      </mat-list-item>
+    </mat-list>
   </div>
   <ng-template #noCart>
-    <p color='warning'></p>
+    <p color='warning'>There are no items in your cart</p>
   </ng-template>
 </div>
