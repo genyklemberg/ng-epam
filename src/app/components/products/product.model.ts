@@ -7,5 +7,6 @@ export class ProductModel implements IProduct {
     public price: number,
     public category,
     public isAvailable: boolean,
-    public inCart: boolean) {}
+    public inCart: boolean,
+    public quantity: number) {}
 }

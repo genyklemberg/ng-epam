@@ -1,0 +1,11 @@
+<div *ngIf='item' style='display: flex; flex-direction: row; width: 400px'>
+  <p>{{item.name}}</p>
+  <span>
+    <input type='number' (change)='changeQuantity($event.target.value)' [value]='item.quantity'>
+    <strong>$ {{item.price * item.quantity}}</strong>
+    <button mat-icon-button>
+      <mat-icon (click)='remove(item)' color='warn'>delete</mat-icon>
+    </button>
+  </span>
+</div>
+

@@ -4,7 +4,10 @@
     <mat-icon>shopping_cart</mat-icon>
     <mat-list>
       <mat-list-item *ngFor='let item of items'>
-        <p>{{item.name}}</p>
+        <my-cart-item
+          [item]='item'
+          (onChangeQ)='changeQ($event)'
+          (onRemove)='removeItem($event)'></my-cart-item>
       </mat-list-item>
     </mat-list>
   </div>
